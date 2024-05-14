@@ -9,7 +9,6 @@ En el artículo original se utilizan distintas redes neuronales entrenadas para 
 - **Wav2Vec2**: también es un transformer que se entrena de forma auto-supervisada para desenmascarar señales de habla. La misma es utilizada ampliamente mediante transferencia de aprendizaje para resolver tareas de habla como reconocimiento de habla, emociones y hablante.
 - **CochlNet**: modelos desarrollados por los autores del artículo para poder realizar análisis más detallados.
 
-**Ampliar con metodologia y resultados del paper**
 En este trabajo se realizan diversos experimentos, nosotros nos focalizaremos en dos de los análisis abordados, los cuales detallamos a continuación: 
 - En una primer aproximación, se utilizan las activaciones de distintas capas de redes neuronales como entrada en una regresión de Ridge, para estimar la señal de BOLD de cada uno de los voxeles de la corteza auditiva.
 - A partir de estos resultados fue posible realizar una comparación directa de la organización jerárquica de las redes neuronales artificiales y del cerebro en el procesamiento del audio. Para esto, se analizó qué capa de la red neuronal era mejor predictor de la señal BOLD de cada voxel, y se encontró que las capas del medio se correspondían mejor con los voxeles de la corteza auditiva primaria, y capas más profundas predecían mejor las regiones vecinas (corteza auditiva secundaria).
