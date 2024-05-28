@@ -17,4 +17,5 @@ Componentwise:
 Tarea:
 - yaml de junifer (es complejo el procedure)
 - julearn ridge vs lasso para componentes -> ampliar Fig3 con otras variantes del modelo.
+- 10 Random splits stimuli (dev - test). RidgeCV en cada dev para buscar alpha. Hacerlo tambien con Lasso. Demeaning de x (activaciones) e y (componentes). R2.
 ## Conclusión
