@@ -10,6 +10,7 @@ Voxelwise:
 
 Componentwise:
 - Mostrar r2 por componente por capa (Plot, layer, r2 por componente)
+![Mel256-EC Base](https://github.com/mrpep/tp-picml/blob/main/doc/figs/mel256-ec-base-r2-comp.png)
 - Mostrar para un componente r2 por capa (Plot, layer, r2 por modelo)
 - Fig 3 Mostrar r2 por componente en mejor capa (barplot, modelo, r2)
 - Mostrar r2 por componente por step de entrenamiento (Plot, step, r2 mejor capa componente)
