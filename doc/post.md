@@ -4,7 +4,8 @@
 ## Resultados
 Voxelwise:
 ![Anatomical labels](https://github.com/mrpep/tp-picml/blob/main/doc/figs/anatomical_labels.png)
-![Voxelwise performance](https://github.com/mrpep/tp-picml/blob/main/doc/figs/voxelwise_regression_r2.png)
+![Voxelwise performance](https://github.com/mrpep/tp-picml/blob/main/doc/figs/voxelwise_best_layer.png)
+![Best layer per voxel](https://github.com/mrpep/tp-picml/blob/main/doc/figs/voxelwise_regression_r2.png)
 ![Voxelwise performance per layer](https://github.com/mrpep/tp-picml/blob/main/doc/figs/voxelwise_regression_r2_per_layer.png)
 - Para cada modelo de encodecmae podemos mostrar cada voxel que capa lo predijo mejor. (Scatter x_ras,y_ras,layer)
 - Algun ejemplo de r2 por voxel para alguna capa (1 vs 9) (Scatter, x_ras, y_ras, r2)
