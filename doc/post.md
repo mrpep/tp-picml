@@ -3,6 +3,7 @@
 
 ## Resultados
 Voxelwise:
+![Voxelwise performance per layer](https://github.com/mrpep/tp-picml/blob/main/doc/figs/voxelwise_regression_r2_per_layer.png)
 - Para cada modelo de encodecmae podemos mostrar cada voxel que capa lo predijo mejor. (Scatter x_ras,y_ras,layer)
 - Algun ejemplo de r2 por voxel para alguna capa (1 vs 9) (Scatter, x_ras, y_ras, r2)
 - Mostrar mediana across voxels r2 para cada modelo vs modelos del paper. (barplot, model, r2)
