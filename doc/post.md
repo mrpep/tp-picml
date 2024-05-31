@@ -1,4 +1,4 @@
-# Post-analysis
+![image](https://github.com/mrpep/tp-picml/assets/35248954/437ae596-f83d-448b-8f0b-9fd8b5eb28fc)# Post-analysis
 --------------
 
 ## Resultados
@@ -10,10 +10,9 @@
 ![Performance across models](https://github.com/mrpep/tp-picml/blob/main/doc/figs/across-models_roi-None_NH2015_CV-splits-nit-10_within_subject_sem_median_r2_test_c_performance_sorted.png)
 
 ### Component-wise analysis:
-- Mostrar para un componente r2 por capa (Plot, layer, r2 por modelo)
+
 ![Component predictions](https://github.com/mrpep/tp-picml/blob/main/doc/figs/encodecmae-r2-per-component.png)
-- Fig 3 Mostrar r2 por componente en mejor capa (barplot, modelo, r2)
-- Mostrar r2 por componente por step de entrenamiento (Plot, step, r2 mejor capa componente)
+![Learning dynamics](https://github.com/mrpep/tp-picml/blob/main/doc/figs/learning-dynamics.png)
 
 Tarea:
 - yaml de junifer (es complejo el procedure)
