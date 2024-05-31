@@ -4,6 +4,7 @@
 ## Resultados
 ### Voxel-wise analysis:
 ![Anatomical labels](https://github.com/mrpep/tp-picml/blob/main/doc/figs/anatomical_labels.png)
+![Per-region performance](https://github.com/mrpep/tp-picml/blob/main/doc/figs/across-layers_roi-roi_label_general_mel256-ec-base_NH2015_median_r2_test_c.svg)
 ![Voxelwise performance](https://github.com/mrpep/tp-picml/blob/main/doc/figs/voxelwise_best_layer.png)
 ![Best layer per voxel](https://github.com/mrpep/tp-picml/blob/main/doc/figs/voxelwise_regression_r2.png)
 ![Voxelwise performance per layer](https://github.com/mrpep/tp-picml/blob/main/doc/figs/voxelwise_regression_r2_per_layer.png)
