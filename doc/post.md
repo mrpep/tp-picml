@@ -1,4 +1,4 @@
-![image](https://github.com/mrpep/tp-picml/assets/35248954/437ae596-f83d-448b-8f0b-9fd8b5eb28fc)# Post-analysis
+# Post-analysis
 --------------
 
 ## Resultados
