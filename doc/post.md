@@ -15,6 +15,9 @@
 ![Component predictions](https://github.com/mrpep/tp-picml/blob/main/doc/figs/encodecmae-r2-per-component.png)
 ![Learning dynamics](https://github.com/mrpep/tp-picml/blob/main/doc/figs/learning-dynamics.png)
 
+![Ridge](https://github.com/mrpep/tp-picml/blob/main/doc/figs/ridge.png)
+![Lasso](https://github.com/mrpep/tp-picml/blob/main/doc/figs/lasso.png)
+
 Tarea:
 - yaml de junifer (es complejo el procedure)
 - julearn ridge vs lasso para componentes -> ampliar Fig3 con otras variantes del modelo.
