@@ -38,10 +38,7 @@ While predicting the activity of each voxel is useful, previous works in the NH2
 ![Component predictions](https://github.com/mrpep/tp-picml/blob/main/doc/figs/encodecmae-r2-per-component.png)
 
 
-![Ridge](https://github.com/mrpep/tp-picml/blob/main/doc/figs/ridge.png)
-![Ridge_alphas](https://github.com/mrpep/tp-picml/blob/main/doc/figs/ridge_alphas.png)
-![Lasso](https://github.com/mrpep/tp-picml/blob/main/doc/figs/lasso.png)
-![Lasso_alphas](https://github.com/mrpep/tp-picml/blob/main/doc/figs/lasso_alphas.png)
+![models_alphas](https://github.com/mrpep/tp-picml/blob/main/doc/figs/models_alphas.png)
 
 Finally, we analysed how the components are learned during the model training. We repeated the analysis above using intermediate checkpoints (spaced by 50k training steps) of EnCodecMAE trained in the mixture, and show the dynamics in the following figure. It can be seen that the last layers don't change too much in terms of predictivity during training for the first components. However, the speech component presents a slope during the first 150k steps, and the music component takes even longer to reach its final $r^2$. This behavior suggests that some components like speech and music are harder to learn and improve with longer trainings. Moreover, for the first layers this slope is more pronounced and is present for every component. This suggests that the first layers take longer to learn components and keep learning them in spite of the last layers being already able to predict them.
 
