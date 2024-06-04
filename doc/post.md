@@ -46,6 +46,15 @@ Finally, we analysed how the components are learned during the model training. W
 
 **Why did we discard the last layer?**
 
+EnCodecMAE is composed of a stack of transformer layers, and for a more stable training, ResiDual normalization is used. As seen in the following figure, ResiDual normalization is a combination of the pre-layer and post-layer normalizations, each of which have advantages and disadvantages in terms of training dynamics. ResiDual normalization introduces an extra input and output in every transformer layer. When extracting features, a choice has to be taken: extract from left or right branch? As most of the processing blocks are in the left branch, and the right branch is more like a skip connection, the left branch is used. However, in the last layer, both branches are combined with a sum, making its behaviour a bit different from previous layers. 
+
+![ResiDual](https://github.com/mrpep/tp-picml/blob/main/doc/figs/residual.png)
+
+Performing a representational similarity analysis using Centered Kernel Alignment (CKA) between the left (x[0]) and right (x[1]) branches, we found that the right branch carries mostly information from the first layers, as seen in the following Figure:
+
+![CKA ResiDual](https://github.com/mrpep/tp-picml/blob/main/doc/figs/cka_encodecmae_branches.png)
+
+The 11 and 12 layers correspond to the decoder and are not used for feature extraction, but all the layers of the right branch are highly similar to the first 2 layers of the left branch. Summing both branches in the last layer make it 'kind of' a combination of the first layers and the last one, hence breaking some of the analysis performed. This explains some of the sudden boosts, for example, in the primary curve of the second figure, the overall $r^2$ in the third figure, etc...
 
 Tarea:
 - yaml de junifer (es complejo el procedure)
