@@ -33,11 +33,19 @@ When compared with other models, EnCodecMAE is the best overall at predicting br
 
 ### Component-wise analysis:
 
+While predicting the activity of each voxel is useful, previous works in the NH2015 dataset have identified 6 brain components using Independent Component Analysis (ICA). These components were linked to: low-frequency signals, high-frequency signals, pitch, broadband signals, speech and music. The component values are precalculated and provided by the authors of the paper. For each component, we trained a ridge regressor and reported the $r^2$ between the predictions and the component values. In the following figure, the $r^2$ for each component, using the 3 models (mixture, speech, music) across the 10 layers is reported. The trends are similar to the voxel-wise analysis, with the speech model being the worse at predicting components, and the mixture and music models being the best. However, for some components related to simpler signals like low and high frequencies, the best layers are not the last but earlier ones. More complex components like music and speech exhibit the same behavior (better predictions with deeper layers). It is interesting that the speech model is not the best at predicting the speech component, and the music model is the best at predicting the low-frequency component.
+
 ![Component predictions](https://github.com/mrpep/tp-picml/blob/main/doc/figs/encodecmae-r2-per-component.png)
+
+Finally, we analysed how the components are learned during the model training. We repeated the analysis above using intermediate checkpoints (spaced by 50k training steps) of EnCodecMAE trained in the mixture, and show the dynamics in the following figure. It can be seen that the last layers don't change too much in terms of predictivity during training for the first components. However, the speech component presents a slope during the first 150k steps, and the music component takes even longer to reach its final $r^2$. This behavior suggests that some components like speech and music are harder to learn and improve with longer trainings. Moreover, for the first layers this slope is more pronounced and is present for every component. This suggests that the first layers take longer to learn components and keep learning them in spite of the last layers being already able to predict them.
+
 ![Learning dynamics](https://github.com/mrpep/tp-picml/blob/main/doc/figs/learning-dynamics.png)
 
 ![Ridge](https://github.com/mrpep/tp-picml/blob/main/doc/figs/ridge.png)
 ![Lasso](https://github.com/mrpep/tp-picml/blob/main/doc/figs/lasso.png)
+
+**Why did we discard the last layer?**
+
 
 Tarea:
 - yaml de junifer (es complejo el procedure)
