@@ -56,8 +56,17 @@ Performing a representational similarity analysis using Centered Kernel Alignmen
 
 The 11 and 12 layers correspond to the decoder and are not used for feature extraction, but all the layers of the right branch are highly similar to the first 2 layers of the left branch. Summing both branches in the last layer make it 'kind of' a combination of the first layers and the last one, hence breaking some of the analysis performed. This explains some of the sudden boosts, for example, in the primary curve of the second figure, the overall $r^2$ in the third figure, etc...
 
-Tarea:
-- yaml de junifer (es complejo el procedure)
-- julearn ridge vs lasso para componentes -> ampliar Fig3 con otras variantes del modelo.
-- 10 Random splits stimuli (dev - test). RidgeCV en cada dev para buscar alpha. Hacerlo tambien con Lasso. Demeaning de x (activaciones) e y (componentes). R2.
-## Conclusión
+## Conclusion
+
+In this work, we were able to recreate the methodology proposed in [(Tuckute et al, 2023)](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3002366) and repeat some of the analysis using a novel audio model, [EnCodecMAE](https://arxiv.org/abs/2309.07391). 
+
+The results obtained are consistent with the results from the original work:
+- The model exhibits a hierarchical correspondence between its layer representations and auditory cortex processing stages.
+- Deeper layers are better overall predictors of the brain activity.
+- The model is able to predict different brain components with a performance similar to the models reported in the paper.
+- Models trained in more diverse signals / tasks are better brain predictors.
+
+Our contributions are:
+- The analysis with our model suggests that it is a better overall brain activity predictor than all the models analysed in the paper.
+- We analyse the evolution of components predictivity during model training. Results suggest that while deeper layers have a good correlation after a few training steps, the first layers take longer to saturate the performance. Moreover, some components like speech and music, take longer to converge to the final perfomance level.
+- We repeated the analysis of component correlation using lasso instead of ridge regression. We were able to obtain similar results.
