@@ -29,6 +29,8 @@ b) Download precomputed activations from EnCodecMAE and other models from [here]
 
 ```bash run_regressions.sh```
 
+Use [this script](https://github.com/mrpep/tp-picml/blob/main/src/ridge_lasso_sklearn.py) to replicate regularization parameters of the Ridge and Lasso regressions when predicting all components for EncodecMAE trained in the mixture context.
+
 **3) Generate plots**
 
 Plots can be generated using the notebooks in /src
