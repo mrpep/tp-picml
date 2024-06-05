@@ -14,9 +14,13 @@ Clone this repository and we also recommend executing [this script](https://gith
 **1) Extract activations from EnCodecMAE models**
 
 There are 2 options:
+
 a) Clone and install [EnCodecMAE repository](https://github.com/habla-liaa/encodecmae). Then run:
+
 ```bash extract_activations.sh```
+
 This will extract the activations in a model_actv folder.
+
 b) Download precomputed activations from EnCodecMAE and other models from [here](https://huggingface.co/datasets/lpepino/neural_stimuli/blob/main/model_actv.tar.gz)
 
 **2) Run regressions**
