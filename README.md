@@ -1,6 +1,6 @@
 # Trabajo final del curso de Neuro/ML a gran escala
 
-Integrantes:
+### Integrantes:
 - Leonardo Pepino
 - Facundo González
 - Agustín Sansone
@@ -21,7 +21,7 @@ b) Download precomputed activations from EnCodecMAE and other models from [here]
 
 **2) Run regressions**
 
-⚠️ Warning this might take a long time (around 3 days with a 24-core CPU). If you want faster results, calculating only components will be faster (should take a few minutes). Alternatively, precomputed results can be downloaded from [here]()
+⚠️ Warning this might take a long time (around 3 days with a 24-core CPU). If you want faster results, calculating only components will be faster (should take a few minutes). Alternatively, precomputed results can be downloaded from [here](https://huggingface.co/datasets/lpepino/neural_stimuli/blob/main/results.tar.gz)
 
 ```bash run_regressions.sh```
 
