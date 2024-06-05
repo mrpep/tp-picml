@@ -2,7 +2,7 @@
 
 ### Integrantes:
 - Leonardo Pepino
-- Facundo González
+- Joaquín González
 - Agustín Sansone
 
 ### Instructions:
